@@ -2,12 +2,12 @@
 <form action="/job/{{job['id']}}/apply" method="post">
 <div class="mb-2">
   <label>Full Name</label><br>
-  <input type="text" name="full_name" placeholder="Your name">
+  <input type="text" required name="full_name" placeholder="Your name">
 </div>
   
   <div class="mb-2">
   <label>Email</label><br>
-  <input type="text" name="email" placeholder="email@mail.com">
+  <input type="email" required name="email" placeholder="email@mail.com">
 </div>
   
   <div class="mb-2">
