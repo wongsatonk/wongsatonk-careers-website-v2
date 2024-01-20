@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{job.title}} - Wongsaton Kampusan</title>
+  {% include 'bootstrap.html' %}
+</head>
+<body>
+  {% include 'nav.html' %}
+  <div class="container">
+  <h1 class="text-center mt-2 mb-1">Careers</h1>
+    {% include 'banner.html' %}
+    <h1 class="mt-4">{{job.title}}</h3>
+  <h4>Company</h4>
+  <p class="lead">{{job.company}}</p>
+  <h4>Location</h4>
+  <p class="lead">{{job.location}}</p>
+  <h4>Responsibilities</h4>
+    <ul>
+      {% for line in job.responsibilities.split('\n') %}
+      <li>{{line}}</li>
+      {% endfor %}
+    </ul>
+  <!-- <p class="lead">{{job.responsibilities}}</p> -->
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>
