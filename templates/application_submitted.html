@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applicatio Submitted</title>
+  {% include 'bootstrap.html' %}
+</head>
+<body>
+  {% include 'nav.html' %}
+  <div class="container">
+    {% include 'banner.html' %}
+    
+    <p class="mt-4">Your application for <b>"{{job['title']}}"</b> has been submitted.</p>
+    
+    <div class="mb-2">
+  <b>Fullname</b>
+  <div>{{application['full_name']}}</div>
+    </div>
+
+  <div class="mb-2">
+    <b>Email</b>
+    <div>{{application['email']}}</div>
+  </div>
+
+    <div class="mb-2">
+      <b>LinkedIn Url</b>
+      <div>{{application['linkedin_url']}}</div>
+    </div>
+    
+    <div class="mb-2">
+    <b>Phone</b>
+      <div>{{application['phone']}}</div>
+  </div>
+
+    <div class="mb-2">
+    <b>Message</b>
+      <div>{{application['message']}}</div>
+  </div>
+
+    <div class="mb-2">
+      <b>Job Description</b>
+      <div>{{application['jobdescription']}}</div>
+    </div>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>
